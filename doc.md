@@ -1,6 +1,7 @@
 ## Patch Variables:
 
 * __dataset__ ```Object```
+* __Fullscreen__ ```Number```
 * __geoLat__ ```Number``` (default Value: `22.478902`)
 * __geoLon__ ```Number``` (default Value: `120.206038`)
 * __gui-rect-h__ ```Number```

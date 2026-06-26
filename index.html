@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Qianzhen Taïwan Dataviz</title>
+    <title>Qianzhen Taïwan Dataviz Anim</title>
     <style>
         body {
             margin: 0;
@@ -29,19 +29,24 @@
         }
 
     </style>
+    
+    
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1">
-    <meta itemprop="name" content="Qianzhen Taïwan Dataviz">
+    <meta itemprop="name" content="Qianzhen Taïwan Dataviz Anim">
     <meta itemprop="description" content="made with cables">
     <meta itemprop="image" content="screenshot.png">
     <meta name="description" content="made with cables"/>
 
 </head>
 <body>
-    <canvas id="glcanvas" width="100vw" height="100vh" tabindex="1"></canvas>
+    <div id="canvascontainer" style="width:100%;height: 100%;overflow: hidden;">
+        <canvas id="glcanvas" width="100vw" height="100vh" tabindex="1"></canvas>
+    </div>
 
-    
+    <script type="text/javascript" src="https://unpkg.com/modern-screenshot/dist/index.js"></script>
+
     <script type="text/javascript" src="js/patch.js" async></script>
     
 
@@ -65,17 +70,17 @@
         document.addEventListener("CABLES.jsLoaded", function (event)
         {
             CABLES.patch = new CABLES.Patch({
-                patch: CABLES.exportedPatch,
-                "prefixAssetPath": "",
-                "assetPath": "assets/",
-                "jsPath": "js/",
-                "glCanvasId": "glcanvas",
-                "glCanvasResizeToWindow": true,
-                "onError": showError,
-                "onPatchLoaded": patchInitialized,
-                "onFinishedLoading": patchFinishedLoading,
-                "canvas": {"alpha":true, "premultipliedAlpha":true } // make canvas transparent
-            });
+            patch: CABLES.exportedPatch,
+            "prefixAssetPath": "",
+            "assetPath": "assets/",
+            "jsPath": "js/",
+            "glCanvasId": "glcanvas",
+            "glCanvasResizeToWindow": true,
+            "onError": showError,
+            "onPatchLoaded": patchInitialized,
+            "onFinishedLoading": patchFinishedLoading,
+            "canvas": {"alpha":true, "premultipliedAlpha":true } // make canvas transparent
+        });
         });
 
         // disable rubberband effect on mobile devices
