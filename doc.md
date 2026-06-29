@@ -27,6 +27,7 @@
 * __temperature-h__ ```Number```
 * __TextureFull__ ```Texture```
 * __time-range-index__ ```Number```
+* __timeline__ ```Number```
 * __wave-direction__ ```Array```
 * __wave-direction-h__ ```Number```
 * __wave-height__ ```Array```
