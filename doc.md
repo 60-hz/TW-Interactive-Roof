@@ -1,6 +1,7 @@
 ## Patch Variables:
 
 * __CurrentTime__ ```String```
+* __currenttimestamp__ ```Number```
 * __dataset__ ```Object```
 * __Fullscreen__ ```Number```
 * __geoLat__ ```Number``` (default Value: `22.478902`)
